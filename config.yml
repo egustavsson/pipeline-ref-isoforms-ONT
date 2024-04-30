@@ -1,0 +1,65 @@
+---
+## General pipeline parameters:
+
+# Name of the pipeline:
+pipeline: "pipeline-nanopore-ref-isoforms"
+# ABSOLUTE path to directory holding the working directory:
+workdir_top: "/home/MinaRyten/Emil/Human_brain_direct_cDNA/Caudate_nucleus_repeat_PAG09772/"
+# Repository URL:
+repo: "https://github.com/nanoporetech/pipeline-nanopore-ref-isoforms.git"
+
+## Pipeline-specific parameters:
+
+# Input genome
+genome_fasta: "/home/MinaRyten/Emil/references/GRCh38.primary_assembly.genome.fa"
+
+existing_annotation: "/home/MinaRyten/Emil/references/gencode.v38.annotation.gtf"
+
+# cDNA or direct RNA reads in fastq format
+reads_fastq: "/home/MinaRyten/Emil/Human_brain_direct_cDNA/Caudate_nucleus_repeat_PAG09772/Caudate_nucleus_PAG09772_pass.fastq"
+
+# The path above is a directory, find and concatenate fastq files:
+concatenate: False
+
+# Process cDNA reads using pychopper, turn off for direct RNA:
+run_pychopper: true
+
+# Options passed to pychopper:
+pychopper_opts: ""
+
+# Extra option passed to minimap2 when generating index
+minimap_index_opts: "-k14"
+
+# Extra options passed to minimap2
+minimap2_opts: "-uf "
+# Add this for SIRV data:
+# "--splice-flank=no"
+
+# Minmum mapping quality
+minimum_mapping_quality: 40
+
+# Internal priming filter context size:
+poly_context: 24
+
+# Maximum allowed poly(A) length in the genome near the 3' end of mapping: 
+max_poly_run: 8
+
+# Minimium number of reads in BAM bundles:
+bundle_min_reads: 50000
+
+# Use exiting annotation as guide for stringtie:
+use_guide_annotation: true
+
+# Options passed to stringtie:
+stringtie_opts: " -L -A gene_abundance_FL.tab"
+
+# Options passed to gffcompare:
+gffcompare_opts: " -R "
+
+# Plot gffcompare results:
+plot_gffcmp_stats: False
+
+# Threads:
+threads: 50
+
+

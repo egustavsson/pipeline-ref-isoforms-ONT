@@ -1,0 +1,4 @@
+SyntaxError:
+Input and output files have to be specified as strings or lists of strings.
+  File "/home/MinaRyten/Emil/Snakemake/pipeline-nanopore-ref-isoforms/Snakefile", line 10, in <module>
+  File "/home/MinaRyten/Emil/Snakemake/pipeline-nanopore-ref-isoforms/snakelib/utils.snake", line 15, in <module>

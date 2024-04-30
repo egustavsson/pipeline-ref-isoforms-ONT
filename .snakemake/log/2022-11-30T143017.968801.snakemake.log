@@ -1,0 +1,3 @@
+WorkflowError in line 4 of /home/MinaRyten/Emil/Snakemake/pipeline-nanopore-ref-isoforms/Snakefile:
+Config file is not valid JSON or YAML. In case of YAML, make sure to not mix whitespace and tab indentation.
+  File "/home/MinaRyten/Emil/Snakemake/pipeline-nanopore-ref-isoforms/Snakefile", line 4, in <module>
