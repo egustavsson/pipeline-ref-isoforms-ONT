@@ -2,21 +2,19 @@
 ## General pipeline parameters:
 
 # Name of the pipeline:
-pipeline: "pipeline-nanopore-ref-isoforms"
+pipeline: "pipeline-ref-isoforms-ONT"
 # ABSOLUTE path to directory holding the working directory:
-workdir_top: "/home/MinaRyten/Emil/Human_brain_direct_cDNA/Caudate_nucleus_repeat_PAG09772/"
-# Repository URL:
-repo: "https://github.com/nanoporetech/pipeline-nanopore-ref-isoforms.git"
+workdir_top: ""
 
 ## Pipeline-specific parameters:
 
 # Input genome
-genome_fasta: "/home/MinaRyten/Emil/references/GRCh38.primary_assembly.genome.fa"
+genome_fasta: ""
 
-existing_annotation: "/home/MinaRyten/Emil/references/gencode.v38.annotation.gtf"
+existing_annotation: ""
 
 # cDNA or direct RNA reads in fastq format
-reads_fastq: "/home/MinaRyten/Emil/Human_brain_direct_cDNA/Caudate_nucleus_repeat_PAG09772/Caudate_nucleus_PAG09772_pass.fastq"
+reads_fastq: ""
 
 # The path above is a directory, find and concatenate fastq files:
 concatenate: False
